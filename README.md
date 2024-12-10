@@ -1,4 +1,4 @@
-# Travel Package Prediction 💎
+# Travel Package Prediction ✈️🏖
 
 (This project is submitted as the final requirement for the Data Science Bootcamp at Dibimbing.ID.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
