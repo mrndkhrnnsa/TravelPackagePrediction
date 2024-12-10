@@ -104,11 +104,12 @@ The dataset used for this project can be found on Kaggle: [Travel Package Datase
 ### Customer Profile by Travel Package
 
 | **Package**     | **Age Range**  | **Monthly Income**   | **Occupation**        | **Designation**     | **City Tier**   |
+|-----------------|----------------|----------------------|-----------------------|---------------------|-----------------|
 | **Basic**       | 20-30          | <20,000              | Free lancers/Salaried | Executives          | 3               |
 | **Standard**    | 31-40          | 25,000 - 30,000      | Small Business Owners | Managers            | 3               |
 | **Deluxe**      | 31-40          | 20,000 - 25,000      | Small Business Owners | Senior Managers     | 3               |
 | **Super Deluxe**| 41-50          | 30,000 - 35,000      | Salaried              | AVPs                | 3               |
-| **Basic**       | 51+            | 35,000 - 40,000      | Small Business Owners | VP                  | 1               |
+| **King**        | 51+            | 35,000 - 40,000      | Small Business Owners | VP                  | 1               |
 
 
 ## Data Pre-Processing
