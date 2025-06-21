@@ -2,40 +2,28 @@
 
 *(This project is submitted as the final requirement for the Data Science Bootcamp at Dibimbing.ID.)*
 
----
-
 ## 📌 Project Background
 
 Travel packages, which combines transportation, accommodation, and sometimes guided activities, are increasingly popular among customers seeking convenience, savings, and curated experiences. However, not all customers choose to purchase these packages. In a highly competitive travel and tourism market, understanding what drives these purchasing decisions is essential for companies looking to improve their offerings and marketing efficiency.
 
 This project analyzes a travel package prediction dataset to uncover customer behavior patterns and build a predictive model. By identifying key drivers of customer decisions, businesses can design targeted marketing campaigns, offer personalized recommendations, and enhance customer satisfaction — ultimately improving revenue and customer retention.
 
----
-
 ## 🧩 Problem Statement
 
 Travel agencies often struggle to identify which customers are likely to purchase travel packages, leading to inefficient, broad-based marketing efforts. This results in wasted budget, missed sales opportunities, and suboptimal customer experiences. The goal of this project is to pinpoint the most influential factors affecting customer purchasing decisions. The model's performance — measured using F1-score and ROC-AUC — reflects its effectiveness in supporting smarter marketing strategies.
-
----
 
 ## 🎯 Project Goals
 
 - Analyze customer profiles and their travel package purchasing behavior.
 - Build a machine learning model to predict the likelihood of package purchase.
 
----
-
 ## 🎯 Objective
 
 To develop a classification model that predicts the probability of a customer purchasing a travel package based on individual profile features.
 
----
-
 ## 📁 Dataset
 
 Dataset Source: [Kaggle - Travel Package Dataset](https://www.kaggle.com/datasets/sanamps/tourpackageprediction)
-
----
 
 ## 📚 Data Dictionary
 
@@ -61,8 +49,6 @@ Dataset Source: [Kaggle - Travel Package Dataset](https://www.kaggle.com/dataset
 
 **Target: `ProdTaken` — whether the customer purchased the travel package (1 = Yes, 0 = No)**
 
----
-
 ## 🔄 Data Preprocessing
 
 1. **Data Cleaning:**  
@@ -83,8 +69,6 @@ Dataset Source: [Kaggle - Travel Package Dataset](https://www.kaggle.com/dataset
 5. **Train-Test Split:**  
    - Split dataset into 80% training and 20% testing for model evaluation.
 
----
-
 ## 🤖 Model Selection & Evaluation
 
 - **Baseline Model:**
@@ -98,11 +82,9 @@ Dataset Source: [Kaggle - Travel Package Dataset](https://www.kaggle.com/dataset
   - Test F1-score: **81.21%**  
   - Best generalization performance across all metrics
 
----
-
 ## 🔍 Feature Importance Insights
 
-![Features Importances](images/features_importances.png)
+![Features Importances](features_importances.png)
 
 Top predictive features (in ranked order):
 
@@ -111,8 +93,6 @@ Top predictive features (in ranked order):
 3. **Number of Follow-ups** – More follow-ups increase the likelihood of conversion.
 4. **Preferred Property Star** – Customers show slight preference for 5-star accommodations.
 5. **Age** – Customers in their late 20s to 40s show higher conversion rates.
-
----
 
 ## 📌 Key Recommendations
 
@@ -124,7 +104,5 @@ Top predictive features (in ranked order):
 
 3. **Strengthen Follow-Up & Personalization**  
    Set a minimum number of follow-ups per lead. Automate and personalize outreach, and tailor package suggestions based on customer preferences.
-
----
 
 ## 🙏 Thank You!
