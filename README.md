@@ -84,7 +84,7 @@ Dataset Source: [Kaggle - Travel Package Dataset](https://www.kaggle.com/dataset
 
 ## 🔍 Feature Importance Insights
 
-![Features Importances](features_importances.png)
+![Features Importances](feature_importances.png)
 
 Top predictive features (in ranked order):
 
