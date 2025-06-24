@@ -51,82 +51,22 @@ The dataset used for this project can be found on Kaggle: [Travel Package Datase
 
 - **ProdTaken:** Whether the customer took the product or not
 
-## Exploratory Data Analysis
-
-### Proportion of Purchased Travel Packages 
-
-![Proportion of Purchased Travel Packages](images/proportion_purchased.png)
-
-**Insight**: The percentage of people purchasing the product (18.8%) is less than those who do not (81.2%). Therefore, key factors driving purchase behaviour need to be identified, and a more targeted marketing approach needs to be implemented.
-
-### Factors Influencing Customer Purchasing Behaviour
-
-#### Percentage Distribution of Travel Package Purchased by Product Pitched
-
-![Percentage Distribution of Travel Package Purchased by Product Pitched](images/proportion_purchased_by_type_of_product_pitched.png)
-
-**Insights**:
-
-- More customers purchased the travel package when pitched the basic product, compared to the Super Deluxe and King options.
-- The basic package resonates more with the majority of customers, potentially due to its perceived affordability and suitability for a wider audience.
-
-#### Customer Age Insights
-
-![Age Distribution](images/age_distribution.png)
-
-![Distribution of Mean Age by Product Type](images/age_vs_product_bought.png)
-
-**Insights:**
-
-- Most purchases occur between 25–40 years, peaking around 30 years.
-- Product preference shifts with age. Higher-tier packages appeal to older customers, while younger customers favor budget-friendly options.
-
-#### Consumer Income Insights
-
-![Monthly Income Distribution](images/income_distribution.png)
-
-![Boxplot of Monthly Income by Product Type](images/income_vs_product_bought.png)
-
-**Insights:**
-
-- Income distribution is concentrated between $15,000–30,000, peaking at $20,000–25,000.
-- Higher-tier products align with higher income. Product preferences correlate with income, supporting segmentation by purchasing power.
-
-#### Percentage Distribution of Travel Package Purchased by Number of Follow-ups
-
-![Percentage Distribution of Travel Package Purchased by Product Pitched](images/proportion_purchased_by_follow_ups.png)
-
-**Insights**:
-
-- Customers with a higher number of follow-ups were more likely to purchase a travel package. 
-- Increased engagement from the sales team positively impacts customer decisions, indicating that persistent follow-up efforts may play a significant role in converting potential leads into actual buyers.
-
-### Customer Profile by Travel Package
-
-| **Package**     | **Age Range**  | **Monthly Income**   | **Occupation**        | **Designation**     | **City Tier**   |
-|-----------------|----------------|----------------------|-----------------------|---------------------|-----------------|
-| **Basic**       | 20-30          | <20,000              | Free lancers/Salaried | Executives          | 3               |
-| **Standard**    | 31-40          | 25,000 - 30,000      | Small Business Owners | Managers            | 3               |
-| **Deluxe**      | 31-40          | 20,000 - 25,000      | Small Business Owners | Senior Managers     | 3               |
-| **Super Deluxe**| 41-50          | 30,000 - 35,000      | Salaried              | AVPs                | 3               |
-| **King**        | 51+            | 35,000 - 40,000      | Small Business Owners | VP                  | 1               |
-
-
 ## Data Pre-Processing
 
 1. Data Wrangling involved data cleaning such as fixing data quality (types, duplicates, and missing).
-There were 2.8% duplicated data that were dropped and a few MAR data filled with Mice Imputation.
+There were no duplicated data found and a few MAR data filled with Mice Imputation.
 2. Feature Selection and Engineering involved:
 - Encoding the categorical variables (`TypeofContact`, `Occupation`, `Gender`, `ProductPitched`, `MaritalStatus`, and `Designation`)
 - Checking variables multicollinearity (`Designation` was dropped)
 3. The data was then split into 80% train: 20% test ratio for modelling
 4. Outliers were also removed from the train data set.
+5. Standard Scaling was performed for Logistic Regression.
 
 ## Model Selection and Analysis
 
-The base model Decision Tree showed a training F1-score of 100% and testing F1-score of 71.72%. 
+The base model Logistic Regression showed a training F1-score of 38.99% and testing F1-score of 43.60%. 
 
-The strongest performing model with good generalization is the XGBoost with a training F1-score of 99.84% and testing F1-score of 78.83%. A tuned XGBoost model (without SMOTE) showed further improvement over all metrics with a testing F1-score of 78.96%.
+The strongest performing model with good generalization is the XGBoost with a training F1-score of 99.93% and testing F1-score of 79.19%. A tuned XGBoost model (without SMOTE) showed further improvement over all metrics with a testing F1-score of 81.21%.
 
 ## Features Importances
 
@@ -135,23 +75,17 @@ The strongest performing model with good generalization is the XGBoost with a tr
 1. **Product Pitched is Dominant:** The type of package offered significantly impacts customer purchasing decisions.
 2. **City Tier**: The customer's demographic location affects their preferences.
 3. **Number of Follow-ups:** Consistent engagement increases the likelihood of purchase.
-4. **Other Demographic Factors:** Occupation provides insight into customer’s financial capacity and interests, impacting their likelihood to purchase specific packages. Since this was not prominent in EDA, it can be a step for improvement in further research.
+4. **Other Demographic Factors:** Prefereed Propoerty Stars and Age Demographic also influences decision.
 
 ## Key Takeaways
 
-1. **Personalize Product Pitches by Customer Persona**  
-   
-- Tailor marketing efforts to emphasize Basic and Deluxe packages for customers in their 30s with income ranges of 20,000-40,000, focusing on executives, senior managers, and small business owners. 
-- Use customer data to recommend packages most likely to match their profile.
+1. **Lead with High-Converting Offers**  
+   Start pitches with Basic or Standard packages to engage interest before upselling.
 
-2. **Focus on High-Conversion Tiers and Cities**  
+2. **Prioritize High-Potential Segments, While Supporting Others**  
+   Focus on City Tier 3 and the 25–40 age group where conversion rates are highest, while continuing to personalize messaging for other segments.
 
-- Prioritize marketing resources in City Tier 3for mid-tier packages (Standard, Deluxe) and City Tier 1 for higher-end packages (King). 
-- Use different communication strategies based on customer city tier demographics.  
-   
-3. **Increase Follow-Up Efforts Strategically**  
-  
-- Design targeted follow-up campaigns for leads that show interest but have not converted yet, especially for high-value packages like Deluxe and King. 
-- Ensure the sales team follows up with at least 3-4 interactions for better success rates.  
+3. **Strengthen Follow-Up & Personalization**  
+   Set a minimum number of follow-ups per lead. Automate and personalize outreach, and tailor package suggestions based on customer preferences.
 
 ## Thank You 👍
