@@ -70,7 +70,7 @@ The strongest performing model with good generalization is the XGBoost with a tr
 
 ## Features Importances
 
-![Features Importances](images/features_importances.png)
+![Features Importances](features_importances.png)
 
 1. **Product Pitched is Dominant:** The type of package offered significantly impacts customer purchasing decisions.
 2. **City Tier**: The customer's demographic location affects their preferences.
